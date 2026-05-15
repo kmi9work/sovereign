@@ -1,0 +1,61 @@
+# --- Rails (back/) ---
+back/log/*
+back/tmp/*
+back/storage/*
+back/vendor/bundle/*
+back/vendor/cache/*
+back/.bundle/
+back/public/system/*
+back/public/uploads/*
+back/public/assets/*
+back/coverage/
+back/.rvmrc
+back/.ruby-gemset
+
+# Keep empty dirs
+!back/log/.keep
+!back/tmp/.keep
+!back/storage/.keep
+
+# --- React Native (native/) ---
+native/node_modules/
+native/ios/Pods/
+native/ios/build/
+native/android/build/
+native/android/app/build/
+native/android/.gradle/
+native/android/.idea/
+native/android/local.properties
+native/*.jsbundle
+native/.metro-health-check*
+native/coverage/
+native/.expo/
+
+# --- Common ---
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+*.log
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+
+# --- OS files ---
+Thumbs.db
+Desktop.ini
+
+# --- Editor files ---
+*.sublime-project
+*.sublime-workspace
+
+# --- IDE ---
+.project
+.classpath
+.settings/

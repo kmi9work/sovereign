@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: redmine
+  password: gfhjkm
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: sovereign
+
+test:
+  <<: *default
+  database: sovereign_test
+
+production:
+  <<: *default
+  database: sovereign_production
+  username: deploy
+  password: <%= ENV["ERAOFCHANGE_DATABASE_PASSWORD"] %>
