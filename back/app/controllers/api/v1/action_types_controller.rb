@@ -40,17 +40,12 @@ module Api
 
         other_countries = Country.where.not(id: country.id).order(:name)
 
-        provinces_of_country = country.provinces.order(:name)
-
-        provinces_of_other = Province.where.not(country_id: country.id)
-                                     .includes(:country)
-                                     .order(:name)
+        provinces = Province.includes(:country).order(:name)
 
         render json: {
           action_type: @action_type,
           other_countries: other_countries.as_json(only: %i[id name]),
-          provinces_of_country: provinces_of_country.as_json(only: %i[id name], methods: [:country_name]),
-          provinces_of_other: provinces_of_other.as_json(only: %i[id name], methods: [:country_name])
+          provinces: provinces.as_json(only: %i[id name], methods: [:country_name])
         }
       end
 
