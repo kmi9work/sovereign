@@ -18,7 +18,7 @@ Rails.application.routes.draw do
         end
       end
 
-      # resources :provinces, only: %i[index show create update destroy]
+      resources :provinces, only: %i[index show create update destroy]
 
       resources :positions, only: %i[index show create update destroy]
 
