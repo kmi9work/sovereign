@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_05_074000) do
   create_table "actions", force: :cascade do |t|
     t.bigint "position_id", null: false
     t.bigint "action_type_id", null: false
-    t.bigint "country_id", null: false
+    t.bigint "country_id"
     t.bigint "second_country_id"
     t.bigint "province_id"
     t.integer "cycle_number"

@@ -52,8 +52,6 @@ module Api
         when "C2"
           action_params[:country_id] = params[:country_id]
           action_params[:second_country_id] = params[:second_country_id]
-        else
-          action_params[:country_id] = params[:country_id]
         end
 
         @action = Action.new(action_params)
